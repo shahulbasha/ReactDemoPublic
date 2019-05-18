@@ -1,0 +1,14 @@
+.card-wrapper {
+  display: block;
+  background-color: cornflowerblue;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 30px 30px;
+  width: 350px;
+  transform: 0.3s;
+  text-align: center;
+}
+
+.card-wrapper:hover {
+  transform: scale(1.1);
+}

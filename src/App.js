@@ -1,26 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import CardList from "./CardList";
+import axios from "axios";
+import SearchBox from "./SearchBox";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      robots: [],
+      searchField: ""
+    };
+  }
+
+  async componentDidMount() {
+    const response = await axios.get(
+      "https://jsonplaceholder.typicode.com/users"
+    );
+    this.setState({ robots: response.data });
+  }
+
+  onSearchChange = event => {
+    this.setState({ searchField: event.target.value });
+  };
+
+  render() {
+    const filteredRobots = this.state.robots.filter(robot => {
+      return robot.username
+        .toLowerCase()
+        .includes(this.state.searchField.toLowerCase());
+    });
+
+    if (this.state.robots.length === 0) {
+      return <h1>Loading...</h1>;
+    } else {
+      return (
+        <div>
+          <h1>
+            <span className="logo1">R</span>OBOFRIENDS
+          </h1>
+          <SearchBox searchChange={this.onSearchChange} />
+          <CardList robots={filteredRobots} />
+        </div>
+      );
+    }
+  }
 }
 
 export default App;

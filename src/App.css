@@ -1,33 +1,58 @@
-.App {
+@font-face {
+  font-family: "Neon Lights";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Neon Lights"), url("neon2.woff") format("woff");
+}
+
+h1 {
+  font-family: "Neon Lights";
+  font-size: 4rem;
+  animation: glow 1s ease-out infinite alternate;
+}
+
+.logo1 {
+  animation: flicker1, flicker1, flicker1;
+  animation-delay: 13s, 3s, 1s;
+  animation-duration: 1s;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes flicker1 {
+  0% {
+    opacity: 0.8;
   }
+  9% {
+    opacity: 0.8;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  13% {
+    opacity: 0.8;
+  }
+  14% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  23% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+
   to {
-    transform: rotate(360deg);
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
   }
 }

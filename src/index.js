@@ -1,11 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Hello from "./Hello";
 import * as serviceWorker from "./serviceWorker";
+import App from "./App";
 
 ReactDOM.render(
-  <Hello greeting={"I am a React Ninjaaaa"} />,
+  <div>
+    <App />
+  </div>,
   document.getElementById("root")
 );
 
