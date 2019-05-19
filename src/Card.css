@@ -1,10 +1,9 @@
 .card-wrapper {
-  display: block;
   background-color: cornflowerblue;
   border-radius: 5px;
   padding: 3px;
   margin: 30px 30px;
-  width: 350px;
+  width: 300px;
   transform: 0.3s;
   text-align: center;
 }

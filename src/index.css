@@ -27,5 +27,6 @@ code {
 input {
   border-radius: 2px;
   border: none;
-  height: 4vh;
+  height: 30px;
+  width: 200px;
 }

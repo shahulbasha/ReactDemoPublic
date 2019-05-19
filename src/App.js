@@ -34,9 +34,12 @@ class App extends React.Component {
     return !robots.length ? (
       <h1>Loading...</h1>
     ) : (
-      <div>
+      <div className="card-list-wrapper">
         <h1>
-          <span className="logo1">R</span>OBOFRIENDS
+          <span className="logo1">R</span>O<span className="logo4">B</span>O
+          <span className="logo2">F</span>
+          <span className="logo5">R</span>I<span className="logo3">E</span>
+          <span className="logo4">N</span>D<span className="logo4">S</span>
         </h1>
         <SearchBox searchChange={this.onSearchChange} />
         <ErrorBoundary>

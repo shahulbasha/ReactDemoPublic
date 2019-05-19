@@ -18,6 +18,41 @@ h1 {
   text-align: center;
 }
 
+.logo2 {
+  animation: flicker1, flicker1, flicker1;
+  animation-delay: 6s, 4s, 2s;
+  animation-duration: 2s;
+  text-align: center;
+}
+
+.logo3 {
+  animation: flicker1, flicker1, flicker1;
+  animation-delay: 8s, 5s, 1s;
+  animation-duration: 2s;
+  text-align: center;
+}
+
+.logo4 {
+  animation: flicker1, flicker1, flicker1;
+  animation-delay: 7s, 4s, 2s;
+  animation-duration: 2s;
+  text-align: center;
+}
+
+.logo5 {
+  animation: flicker1, flicker1, flicker1;
+  animation-delay: 9s, 6s, 3s;
+  animation-duration: 2s;
+  text-align: center;
+}
+
+.logo6 {
+  animation: flicker1, flicker1, flicker1;
+  animation-delay: 7s, 5s, 2s;
+  animation-duration: 2s;
+  text-align: center;
+}
+
 @keyframes flicker1 {
   0% {
     opacity: 0.8;
@@ -47,12 +82,12 @@ h1 {
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
-      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2037b6,
+      0 0 40px #2037b6, 0 0 50px #2037b6, 0 0 60px #2037b6, 0 0 70px #2037b6;
   }
 
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
-      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    text-shadow: 0 0 20px #fff, 0 0 30px #4899f5, 0 0 40px #4899f5,
+      0 0 50px #4899f5, 0 0 60px #4899f5, 0 0 70px #4899f5, 0 0 80px #4899f5;
   }
 }
